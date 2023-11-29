@@ -162,3 +162,20 @@ for i in button_text_list:
         columnvalue = 0
 
 gui_root.mainloop()
+
+operations={'ADD':add,'ADDITION':add,'SUM':add,'PLUS':add,
+            'SUBTRACTION':sub , 'DIFFERENCE':sub , 'MINUS':sub , 'SUBTRACT':sub,
+            'PRODUCT': mul, 'MULTIPLICATION': mul,'MULTIPLY': mul,
+            'DIVISION': div, 'DIV': div, 'DIVIDE': div,
+            'LCM':lcm , 'HCF':hcf,
+            'MOD':mod ,'REMAINDER':mod , 'MODULUS':mod }
+
+def findNumbers(t):
+    l=[]
+    for num in t:
+        try:
+            l.append(int(num))
+        except ValueError:
+            pass
+    return l
+
